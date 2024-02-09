@@ -1,0 +1,32 @@
+.Main-Section{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    color: rgba(0, 40, 37, 0.907);
+}
+
+.main-section-card-container h1 {
+    padding: 10%;
+    padding-bottom: 0;
+    font-size: 100px;
+    white-space: nowrap;
+}
+
+.main-section-card-container p {
+    margin-left : 10%;
+    font-size: 35px;
+}
+
+.main-section-card-container {
+    margin: auto;
+    margin-top: 0;
+    margin-left: 10%;
+    /* border: 10px solid;
+    border-image-slice: 1;
+    border-width: 5px;
+    border-image-source: linear-gradient(to bottom, cadetblue, #01595b ); */
+    background: transparent;
+    height: fit-content;
+    width: max-content;
+    padding: 2%;
+}
