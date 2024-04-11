@@ -6,7 +6,7 @@ const ChatBot = () => {
   const [prompt, setPrompt] = useState('');
   const [output, setOutput] = useState(``);
 
-  const url = "http://localhost:5000/get_chat"
+  const url = "https://mediscan-model.onrender.com/get_chat"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
