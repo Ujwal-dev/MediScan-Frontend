@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import RegisterDone from './components/Register/RegisterDone';
 import UserContextProvider from './Contexts/UserContextProvider';
 import ForgetPassword from './components/ForgetPassword/ForgetPassword';
+import ChatBot from './components/Chatbot/Chatbot';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
             <Route path='/register' element={<Register />}/>
             <Route path='/registered' element={<RegisterDone />}/>
             <Route path='/forget-password' element={<ForgetPassword />}/>
+            <Route path='/chat-bot' element={<ChatBot />}/>
           </Routes>
         </BrowserRouter>
       </div>

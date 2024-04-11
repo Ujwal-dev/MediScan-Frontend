@@ -19,19 +19,7 @@ function Header() {
     <header className='header'>
         {/* <Logo></Logo> */}
         <h2 className='header--title' onClick={() => navigate("/")}>MEDI-SCAN</h2>
-        <div className='drop-down'>
-            <NavDropdown title="About" id="basic-nav-dropdown" className="custom-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                Separated link
-                </NavDropdown.Item>
-            </NavDropdown>
-        </div>
+        <span className='header--chatlink' onClick={() => navigate("/chat-bot")}>Medi Chat</span> 
         <span className='header--span'>
       {
         user !== "" ?(

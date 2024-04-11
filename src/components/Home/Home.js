@@ -15,16 +15,16 @@ export default function Home() {
       setUser(storedUser);
       return ;
     }
-    if(!user)
-    {
-      setTimeout(()=>{
-        if(storedUser)
-        {
-          return
-        }
-        navigate("/login")
-      },10000)
-    }
+    // if(!user)
+    // {
+    //   setTimeout(()=>{
+    //     if(storedUser)
+    //     {
+    //       return
+    //     }
+    //     navigate("/login")
+    //   },10000)
+    // }
   },[navigate , user , setUser])
 
   return (
