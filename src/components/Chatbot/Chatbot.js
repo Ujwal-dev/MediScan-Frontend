@@ -1,15 +1,23 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 import './Chatbot.css'; 
 
 const ChatBot = () => {
   const [prompt, setPrompt] = useState('');
   const [output, setOutput] = useState(``);
+  const navigate = useNavigate();
 
   const url = "https://mediscan-model.onrender.com/get_chat"
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const storedUser = localStorage.getItem('user');
+    if(!storedUser)
+    {
+        navigate("/login")
+        return;
+    }
     try {
       const response = await axios.post(url, { "input_prompt":prompt });
       console.log(response.data.response)
@@ -39,6 +47,7 @@ const ChatBot = () => {
 }
 
   return (
+    <>
     <div className="chatbot-container">
       <h1>Medi Chat</h1>
       <form onSubmit={handleSubmit}>
@@ -56,6 +65,7 @@ const ChatBot = () => {
         </div>
       )}
     </div>
+    </>
   );
 };
 

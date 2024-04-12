@@ -19,7 +19,9 @@ export default function RegisterForm({formSuccess , setFormSuccess , user, setUs
       const response = await axios.post(dest, user);
       setErrorMsg(response.data);
       setFormSuccess(true)
+      console.log("Registered")
     } catch (error) {
+      console.log("Not Registered")
       setFormSuccess(false)
       setErrorMsg(error.response.data);
     }
